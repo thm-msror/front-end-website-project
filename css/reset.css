@@ -1,0 +1,48 @@
+@charset "utf-8";
+/*
+Name: Tehreem Masroor
+ID: 60302531
+Date: 28th Oct 2023 
+ */
+/*
+   The purpose of this reset sheet is to override/cancel 
+   some of the default browser styles that may creep 
+   into the final design of the web page due to inheritance
+   and precedence as this makes it harder to control the layout.
+*/
+
+/*
+   In particular, we want to start fresh with no margins, 
+   no paddings, and the box-sizing set to border-box.
+   In addition, a uniform font size and line height are
+   preferred. It's easier to control the layout this way 
+   and we can add the required margins/paddings later to 
+   specific elements when needed.
+*/
+
+* {
+   margin: 0px;
+   padding: 0px;
+   line-height: 1;
+   font-size: 100%;
+   box-sizing: border-box;
+   font-weight: normal;
+}
+
+/*
+   It's customary to remove the underlining of links nowadays.
+*/
+nav ul a {
+   text-decoration: none;
+}
+
+/*
+   and remove the bullet point symbols of navigational lists.
+*/
+nav ul {
+   list-style-type: none;
+}
+
+a{
+   text-decoration: none;
+}

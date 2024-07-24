@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Bake Subscribe</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/subscribe.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <script src="../js/validate.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html"><img src="../img/baking_logo.png" alt="#logo here"></a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/product.html">Products</a></li>
+            <li><a href="../html/contact.html">Contact Us</a></li>
+            <li><a href="../html/subscribe.html">Subscribe</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <form onsubmit="return validateSubscribeForm();" action="https://sit.udst.edu.qa/processform.php">
+            <fieldset id="user-info">
+                <legend>Personal Information</legend>
+                <div class="formRow">
+                    <label for="name">Enter Name</label>
+                    <error>
+                        <span id="err1" style="display: none;"></span>
+                        <!-- Error message will be displayed here -->
+                    </error>
+                    <input type="text" name="name" id="name" onblur="validateName('name', 'err1');"
+                        placeholder="First and Last Name">
+                </div>
+                <div class="formRow">
+                    <label for="user-name">Enter Username</label>
+                    <error>
+                        <span id="err2" style="display: none;"></span>
+                        <!-- Error message will be displayed here -->
+                    </error>
+                    <input type="text" name="user-name" id="user-name" onblur="validateName('user-name', 'err2');">
+                </div>
+                <div class="formRow">
+                    <label for="pass">Enter Password</label>
+                    <error>
+                        <span id="lengthErr" style="display: inline;"></span>
+                        <br>
+                        <span id="letterErr" style="display: inline;"></span>
+                        <br>
+                        <span id="digitErr" style="display: inline;"></span>
+                        <br>
+                        <span id="specialErr" style="display: inline;"></span>
+                        <br>
+                        <!-- Error message will be displayed here -->
+                    </error>
+                    <input type="password" name="pass" id="pass" onblur="validatePassword();">
+                    <input type="checkbox" name="showpass" id="showpass" onclick="return showPassword();">
+                </div>
+                <br>
+                <div class="formRow">
+                    <label for="confirm-pass">Confirm Password</label>
+                    <error>
+                        <span id="err5" style="display: none;"></span>
+                        <!-- Error message will be displayed here -->
+                    </error>
+                    <input type="password" name="confirm-pass" id="confirm-pass" onblur="validateConfirmPassword();">
+                </div>
+                <div class="formRow">
+                    <label for="e-mail">Enter Email</label>
+                    <error>
+                        <span id="@-char" style="display: inline;"></span>
+                        <br>
+                        <span id="add2other" style="display: inline;"></span>
+                        <br>
+                        <span id="correct-end" style="display: inline;"></span>
+                        <br>
+                        <!-- Error message will be displayed here -->
+                    </error>
+                    <input type="email" name="e-mail" id="e-mail" onblur="validateEmail();">
+                </div>
+                <div class="formRow">
+                    <label for="confirm-email">Confirm Email</label>
+                    <error>
+                        <span id="err9" style="display: none;"></span>
+                        <!-- Error message will be displayed here -->
+                    </error>
+                    <input type="email" name="confirm-email" id="confirm-email" onblur="validateConfirmEmail();">
+                </div>
+                <div class="formRow">
+                    <label for="phone">Enter Phone Number</label>
+                    <error>
+                        <span id="err10" style="display: none;"></span>
+                        <br>
+                        <span id="err11" style="display: none;"></span>
+                        <!-- Error message will be displayed here -->
+                    </error>
+                    <input type="tel" name="phone" id="phone" value="+974" onblur="validatePhone();">
+                </div>
+                <div class="formRow">
+                    <label for="date">Date of Birth</label>
+                    <error>
+                        <span id="err13" style="display: none;"></span>
+                    </error>
+                    <input type="date" name="birth" id="birth">
+                </div>
+                <div class="formRow">
+                    <label for="age">Enter Age</label>
+                    <error>
+                        <span id="err12" style="display: none;"></span>
+                        <!-- Error message will be displayed here -->
+                    </error>
+                    <input type="number" name="age" id="age" onblur="validateAge();">
+                </div>
+            </fieldset>
+
+
+            <fieldset id="shipping-info">
+                <legend>Shipping Address Details</legend>
+                <div class="formRow">
+                    <label for="bldg">Building Number</label>
+                    <error>
+                        <span id="err14" style="display: none;"></span>
+                        <!-- Error message will be displayed here -->
+                    </error>
+                    <input type="text" name="bldg" id="bldg" onblur="validatebldg();">
+                </div>
+                <div class="formRow">
+                    <label for="street">Street Name</label>
+                    <input type="text" name="street" id="street" onblur="validateText('street');">
+                </div>
+                <div class="formRow">
+                    <label for="city">Select City</label>
+                    <select name="city" id="city">
+                        <option value="doha" selected>Doha</option>
+                        <option value="khor">Al Khor</option>
+                        <option value="wakra">Al Wakrah</option>
+                        <option value="wukair">Al Wukair</option>
+                        <option value="umm-salal">Umm Salal Muhammad</option>
+                        <option value="dukhan">Dukhan</option>
+                        <option value="rayyan">Ar-Rayyan</option>
+                        <option value="gharafa">Al Gharafa</option>
+                        <option value="hamour">Abu Hamour</option>
+                        <option value="khaled">Ain Khaled</option>
+                    </select>
+                </div>
+                <div class="formRow">
+                    <label for="sub">Would you like to subscribe to our newsletter ?</label>
+                    <input type="checkbox" name="sub" id="sub">
+                </div>
+            </fieldset>
+            <div id="buttons">
+                <input type="submit" value="Submit" />
+                <input type="reset" value="Cancel" />
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p id="contact">Contact Us</p>
+        <section class="icons">
+            <a href="mailto:letsbake@gmail.com"><img src="../img/gmail.png" alt="#"></a>
+            <a href="#"><img src="../img/facebook.png" alt="#"></a>
+            <a href="#"><img src="../img/instagram.png" alt="#"></a>
+            <a href="#"><img src="../img/twitter.png" alt="#"></a>
+        </section>
+
+        <p class="tlocation">Store Location</p>
+        <address class="location">
+            Located in Doha Festival City, Umm Salal Muhammad, Doha, Qatar
+        </address>
+
+        <p class="thour">Operational hours</p>
+        <p class="hour1">Sunday to Thursday: 8 AM - 12 PM</p>
+        <p class="hour2">Friday to Saturday: 9 AM - 10 PM</p>
+
+        <p class="thelp">Help</p>
+        <p class="help">FAQ</p>
+    </footer>
+</body>
+
+</html>

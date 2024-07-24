@@ -1,0 +1,88 @@
+body{
+    width: 100%;
+    min-width: 800px;
+    max-width: 1800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+header{
+    grid-area: header;
+}
+header img{
+    width: 35%;
+}
+nav{
+    grid-area: nav;
+    width: 100%;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 15px;
+    margin-bottom: 15px;
+}
+nav ul li{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "contact tlocation thour thelp"
+                         "contact1 location hour1 help"
+                         "contact1 location hour2 help";
+    width: 100%;
+    grid-gap: 10px;
+    padding-bottom: 15%;
+}
+footer p,address{
+    text-align: center;
+    width: 100%;
+}
+footer p#contact{
+    grid-area: contact;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+footer section.icons{
+    grid-area: contact1;
+    margin: 1px;
+    text-align: center;
+}
+footer section.icons a img{
+    width: 40px;
+    margin: 5px;
+}
+footer p.tlocation{
+    grid-area: tlocation;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+footer address.location{
+    grid-area: location;
+}
+footer p.thour{
+    grid-area: thour;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+footer p.hour1{
+    grid-area: hour1;
+}
+footer p.hour2{
+    grid-area: hour2;
+}
+footer p.thelp{
+    grid-area: thelp;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+footer p.help{
+    grid-area: help;
+}

@@ -1,0 +1,70 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "header header header header"
+                         "nav nav nav nav"
+                         "product product product product"
+                         "product product product product"
+                         "product product product product"
+                         "product product product product"
+                         "footer footer footer footer";
+}
+main{
+    grid-area: product;
+    display: grid;
+    margin-right: 15px;
+    margin-left: 15px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "img1 img2 img3 img4"
+                         "img5 img6 img7 img8"
+                         "img9 img10 img11 img12"
+                         "img13 img14 img15 img16";
+    grid-gap: 50px;
+    grid-row-gap: 100px;
+    margin-bottom: 100px;
+}
+main div:hover{
+    border: 1px groove rgb(255, 162, 190);
+}
+div img{
+    width: 85%;
+}
+div.img1{
+    margin-top: 0.1rem;
+}
+div.img3{
+    margin-top: 7rem;
+}
+div.img4{
+    margin-top: 4.5rem;
+}
+div.img8{
+    margin-top: 6rem;
+}
+div.img12 img{
+    width: 100%;
+}
+div.img12{
+    margin-top: 5.5rem;
+}
+div.img13 img{
+    width: 260px;
+}
+div.img13{
+    margin-top: 0.5rem;
+}
+div.img14 img{
+    width: 260px;
+}
+div.img14{
+    margin-top: 5.5rem;
+}
+div.img15{
+    margin-top: -1.5rem;
+}
+div.img16{
+    margin-top: -2.8rem;
+}
+p.label{
+    padding-top: 20px;
+}

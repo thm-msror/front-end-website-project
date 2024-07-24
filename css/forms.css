@@ -1,0 +1,41 @@
+/* form styling */
+fieldset{
+    border: 1px solid #b38a0d;
+    background-color: #ffdfd3;
+}
+fieldset legend{
+    border: 1px solid #b38a0d;
+    background-color: #fab8abe0;
+    font-size: large;
+    font-weight: bold;
+}
+div#buttons input[type="submit"], div#buttons input[type="reset"]{
+    background-color: #fab8abe0;
+    border: 1px solid #b38a0d;
+    color: #996f19;
+}
+
+/* common form formatting */
+form > fieldset{
+    width: 90%;
+    padding: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+legend{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+div.formRow{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-areas: "label input";
+    padding-bottom: 30px;
+}
+input[type="text"]{
+    width: 70%;
+}
+

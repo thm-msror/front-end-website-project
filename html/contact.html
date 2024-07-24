@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Bake Subscribe</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <script src="../js/validate.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html"><img src="../img/baking_logo.png" alt="#logo here"></a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/product.html">Products</a></li>
+            <li><a href="../html/contact.html">Contact Us</a></li>
+            <li><a href="../html/subscribe.html">Subscribe</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <p>We hope you found what you were looking for at our one-stop shop for all your baking needs.
+                For any suggestions about new products, inquiries, feedback or complaints, please do not hesitate to
+                contact us.
+            </p>
+            <table>
+                <tr>
+                    <td class="label">Phone Number</td>
+                    <td>+974 2255 6438</td>
+                </tr>
+                <tr>
+                    <td class="label">Head Office Hours</td>
+                    <td>Sunday to Thursday:</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>8AM TO 10PM</td>
+                </tr>
+                <tr>
+                    <td class="label">Email Address</td>
+                    <td>letsbake.customerservice@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="label">Head Office Address</td>
+                    <td>9CPJ+27R، الذهبي, Umm Salal Muhammed</td>
+                </tr>
+            </table>
+            <article id="address">
+                <p>Visit Our Head Office</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.5340658810496!2d51.42912485214683!3d25.38692766643387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45df675affd5bb%3A0x84954daaab38002c!2sHome!5e0!3m2!1sen!2sqa!4v1700227735179!5m2!1sen!2sqa"
+                    width="600" height="450" style="border:0;" allowfullscreen=""
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+        </section>
+
+        <article>
+            <p>To help us improve our products, please send us feedback by filling the form below.</p>
+            <form onsubmit="return validateContactForm();" action="https://sit.udst.edu.qa/processform.php">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <div class="formRow">
+                        <label for="name">Enter Name</label>
+                        <input type="text" name="user" id="user" onblur="validateUser();">
+                    </div>
+                    <div class="formRow">
+                        <label for="message">Tell us more about your experience!</label>
+                        <textarea name="message" id="message" cols="30" rows="10"
+                            onblur="validateMessage();"></textarea>
+                    </div>
+                    <div class="radioRow">
+                        <label for="contact">What is you preferred method of contact ?</label>
+                        <span id="error-msg" style="display: none;"></span>
+                        <!-- Error message will be displayed here -->
+                        <br>
+                        <div id="phoneradio">
+                            <input type="radio" name="contact" id="phone" onclick="return validateContact();">
+                            <label for="phone">Phone Call</label>
+                        </div>
+                        <br>
+                        <div id="emailradio">
+                            <input type="radio" name="contact" id="email" onclick="return validateContact();">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <label for="prefer" id="preferredContact">Email Address</label>
+                        <input type="email" name="prefer" id="prefer" onclick="return validateEmail_Phone();">
+                    </div>
+                </fieldset>
+                <div id="buttons">
+                    <input type="submit" value="Submit" />
+                    <input type="reset" value="Cancel" />
+                </div>
+            </form>
+        </article>
+    </main>
+    <footer>
+        <p id="contact">Contact Us</p>
+        <section class="icons">
+            <a href="mailto:letsbake@gmail.com"><img src="../img/gmail.png" alt="#"></a>
+            <a href="#"><img src="../img/facebook.png" alt="#"></a>
+            <a href="#"><img src="../img/instagram.png" alt="#"></a>
+            <a href="#"><img src="../img/twitter.png" alt="#"></a>
+        </section>
+
+        <p class="tlocation">Store Location</p>
+        <address class="location">
+            Located in Doha Festival City, Umm Salal Muhammad, Doha, Qatar
+        </address>
+
+        <p class="thour">Operational hours</p>
+        <p class="hour1">Sunday to Thursday: 8 AM - 12 PM</p>
+        <p class="hour2">Friday to Saturday: 9 AM - 10 PM</p>
+
+        <p class="thelp">Help</p>
+        <p class="help">FAQ</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+body header>img{
+    width: 50%;
+}
+body{
+    margin-top: 10px;
+    margin-bottom: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "header header header header"
+                         "nav nav nav nav"
+                         "article article article article"
+                         "section section section section"
+                         "block block block block"
+                         "footer footer footer footer";
+    grid-gap: 10px;
+}
+article{
+    grid-area: article;
+    padding: 35px;
+}
+article p{
+    padding-bottom: 15px;
+    line-height: 1.5rem;
+}
+section#product{
+    grid-area: section;
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    grid-template-areas: "h1 h1 h1"
+                         "img1 img2 img3"
+                         "p1 p2 p3"
+                         "img4 img5 img6"
+                         "p4 p5 p6";
+    grid-gap: 25px;
+    padding-bottom: 50px;
+}
+section#product img{
+    margin-right: auto;
+    margin-left: auto;
+    width: 75%;
+}
+section#product p{
+    margin-right: auto;
+    margin-left: auto;
+}
+section#product img#img1{
+    grid-area: img1;
+}
+section#product p#img1{
+    grid-row: img1;
+}
+section#product img#img2{
+    grid-area: img2;
+    height: 100%;
+    width: 85%;
+}
+section#product p#img2{
+    grid-row: img1;
+}
+section#product img#img3{
+    grid-area: img3;
+}
+section#product p#img3{
+    grid-row: img1;
+}
+section#product img#img4{
+    grid-area: img4;
+}
+section#product p#img4{
+    grid-row: img1;
+}
+section#product img#img5{
+    grid-area: img5;
+}
+section#product p#img5{
+    grid-row: img1;
+}
+section#product img#img6{
+    grid-area: img6;
+}
+section#product p#img6{
+    grid-row: img1;
+}
+
+section#product h1{
+    grid-area: h1;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+section#block{
+    grid-area: block;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "h1 h1 h1 h1"
+                         "bq bq bq bq";
+    width: 100%;
+    grid-gap: 15px;
+    padding: 50px;
+}
+section#block h1{
+    grid-area: h1;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+section#block blockquote{
+    text-align: left;
+    line-height: 2rem;
+    padding: 10px;
+}
+section#block blockquote>q{
+    display: block;
+    line-height: 2rem;
+    padding-top: 15px;
+}
+
+

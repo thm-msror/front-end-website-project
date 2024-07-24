@@ -1,0 +1,64 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #996f19;
+    background-color: #facebc;
+    font-size: large;
+}
+nav ul{
+    background-color: #f6a392e0;
+    padding: 25px;
+}
+nav ul li a{
+    color: #996f19;
+    font-size: large;
+    font-weight: bold;
+}
+article{
+    font-size: large;
+}
+section#product h1{
+    font-size: x-large;
+    font-weight: bold;
+    background-color: #f6a392e0;
+}
+section#product p{
+    color: #996f19;
+    font-weight: bolder;
+}
+section#block h1{
+    font-size: x-large;
+    font-weight: bold;
+    background-color: #f9d7ca;
+    border: 2px dashed #dba504;
+    border-radius: 10px;
+}
+section#block blockquote{
+    background-color: #f9d7ca;
+    border: 2px dashed #dba504;
+    border-radius: 10px;
+}
+section#block blockquote q{
+    font-style: italic;
+    font-size: medium;
+}
+footer{
+    background-color: #f6a392e0;
+    color: #b38a0d;
+}
+section.product_images{
+    font-size: medium;
+}
+
+div p{
+    line-height: 1.5rem;
+}
+div p.imp{
+    font-weight: bold;
+    text-align: center;
+}
+div p.label{
+    font-weight: bold;
+}
+
+
+

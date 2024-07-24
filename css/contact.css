@@ -1,0 +1,80 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "header header header header"
+                         "nav nav nav nav"
+                         "section section section section"
+                         "footer footer footer footer";
+}
+main{
+    grid-area: section;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "section article";
+    grid-gap: 30px;
+}
+section{
+    grid-area: section;
+    padding: 15px;
+}
+section p{
+    padding-bottom: 15px;
+    line-height: 1.5rem;
+}
+section table{
+    padding-bottom: 10px;
+    height: 15%;
+}
+.label{
+    width: 35%;
+}
+article#address p{
+    font-weight: bold;
+}
+article#address iframe{
+    width: 80%;
+}
+article{
+    grid-area: article;
+    padding: 15px;
+}
+article p{
+    padding-bottom: 15px;
+    line-height: 1.5rem;
+}
+article form{
+    align-self: right;
+}
+div.radioRow{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-areas: "label phone email";
+    grid-gap: 10%;
+}
+label[for="contact"]{
+    grid-area: label;
+}
+span#error-msg{
+    padding-bottom: 20%;
+}
+div#phoneradio{
+    grid-area: phone;
+}
+div#emailradio{
+    grid-area: email;
+}
+
+
+div#buttons{
+    margin-right: 5%;
+    margin-left: 15%;
+}
+input[type="submit"],input[type="reset"]{
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 5px;
+    font-size: 1.1em;
+    width: 35%;
+}
+

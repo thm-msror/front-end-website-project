@@ -1,0 +1,88 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "header header header header"
+                         "nav nav nav nav"
+                         "section section section section"
+                         "footer footer footer footer";
+}
+body section{
+    grid-area: section;
+    padding-bottom: 15px;
+}
+body section form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "form1 form2"
+                         "buttons buttons";
+}
+form fieldset#user-info{
+    grid-area: form1;
+}
+form fieldset#shipping-info{
+    grid-area: form2;
+}
+form div#buttons{
+    grid-area: buttons;
+}
+div#buttons{
+    margin-right: 20%;
+    margin-left: 30%;
+    padding: 15px;
+}
+input[type="submit"],input[type="reset"]{
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 5px;
+    font-size: 1.1em;
+    width: 35%;
+}
+div.formRow label{
+    padding-left: 100px;
+}
+div.formRow input{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+input[type="date"]{
+    height: 110%;
+    font-size: 110%;
+}
+div select{
+    width: 35%;
+    margin-right: auto;
+    margin-left: 25%;
+}
+div.formRow input[type="checkbox"]#sub{
+    margin: 15px;
+}
+div.formRow input[type="checkbox"]#showpass{
+    margin-left: 200%;
+    margin-top: -9%;
+}
+
+span{
+    padding-bottom: 30%;
+}
+error {
+    display: block; /* Display error messages as block elements */
+    margin-top: 5px; /* Add space above the error messages */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: red;
+}
+
+form div.formRow {
+    position: relative; /* Position the form row relative */
+    margin-bottom: 40px; /* Add space between form rows */
+}
+
+form div.formRow error {
+    position: absolute; /* Position the error messages absolutely within the form row */
+    left: 30px; /* Adjust the left position as needed */
+    right: 255px;
+    top: 35%; /* Adjust the top position as needed */
+}
